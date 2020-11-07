@@ -1,20 +1,50 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TXFMC.MainPage">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="TXFMC.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:TXFMC.Controls">
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
+        <Frame Padding="24"
+               BackgroundColor="#2196F3"
+               CornerRadius="0">
+            <Label HorizontalTextAlignment="Center"
+                   FontSize="36"
+                   TextColor="White"
+                   Text="Welcome to Amine24!" />
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10" />
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0" />
-        <Label FontSize="16" Padding="30,24,30,0">
+        <Label Padding="30,10,30,10"
+               FontSize="Title"
+               Text="Start developing now" />
+        <Label Padding="30,0,30,0"
+               FontSize="16"
+               Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" />
+        <Label Padding="30,24,30,0" FontSize="16">
             <Label.FormattedText>
                 <FormattedString>
                     <FormattedString.Spans>
                         <Span Text="Learn more at " />
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold" />
+                        <Span FontAttributes="Bold" Text="https://aka.ms/xamarin-quickstart" />
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+
+        <Grid ColumnSpacing="0" RowDefinitions="*,*">
+            <controls:ButtonControl Grid.Column="0"
+                                    HeightRequest="50"
+                                    Margin="10"
+                                    BtnBackgroundColor="DodgerBlue"
+                                    Image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gtk-go-back-ltr.svg/1200px-Gtk-go-back-ltr.svg.png"
+                                    TextColor="White"
+                                    Text="Proceed" />
+
+            <controls:ButtonControl Grid.Column="1"
+                                    HeightRequest="50"
+                                    Margin="10"
+                                    BtnBackgroundColor="Green"
+                                    Image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gtk-go-back-ltr.svg/1200px-Gtk-go-back-ltr.svg.png"
+                                    TextColor="White"
+                                    Text="Download" />
+        </Grid>
     </StackLayout>
 </ContentPage>

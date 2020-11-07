@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="TXFMC.Controls.ButtonControl"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="RootLayout">
+    <Frame Padding="10"
+           BackgroundColor="{Binding Path=BtnBackgroundColor, Source={x:Reference RootLayout}}"
+           CornerRadius="25"
+           HasShadow="False">
+        <Grid ColumnSpacing="0" ColumnDefinitions="*,45">
+            <Label Grid.Column="0"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="{Binding Path=TextColor, Source={x:Reference RootLayout}}"
+                   Text="{Binding Path=Text, Source={x:Reference RootLayout}}" />
+            <Image Grid.Column="1" Source="{Binding Path=Image, Source={x:Reference RootLayout}}" />
+        </Grid>
+    </Frame>
+</ContentView>
